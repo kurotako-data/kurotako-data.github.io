@@ -1,2 +1,2 @@
 Bonjour
-Ce site est mon showroom de D.A, il est en perpétuelle évolution.
+Ce site est mon portfolio de D.A, il est actuellement en construction
