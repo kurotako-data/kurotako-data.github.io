@@ -1,0 +1,10 @@
+/* Pour augmenter la taille de la police et mettre en gras */
+.custom-header {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.custom-subheader {
+    font-size: 1.5em;
+    font-weight: bold;
+}
