@@ -1,7 +1,10 @@
 theme: jekyll-theme-Dinky
 title: Patrice's portfolio
 description: Bookmark this to keep an eye on my project updates!
-
+sass:  
+  load_paths:    
+    - _sass    
+    - assets/css
 
 
 
