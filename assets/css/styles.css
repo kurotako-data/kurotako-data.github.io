@@ -12,7 +12,7 @@
 /* Pour aligner verticalement le texte avec le panneau latéral */
 .custom-header,
 .custom-subheader {
-    margin-top: 2; /* Ajuste cette valeur pour l'alignement désiré */
+    margin-top: 0; /* Ajuste cette valeur pour l'alignement désiré */
     position: relative;
-    top: -200px; /* Ajuste cette valeur pour aligner le texte */
+    top: -100px; /* Ajuste cette valeur pour aligner le texte */
 }
