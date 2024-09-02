@@ -1,2 +1,2 @@
-Bonjour
-Ce site est mon portfolio de D.A, il est actuellement en construction
+Hello
+This site is my D.A. portfolio and is currently under construction.
