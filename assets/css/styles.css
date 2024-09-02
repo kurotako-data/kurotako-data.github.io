@@ -2,20 +2,9 @@
 .custom-header {
     font-size: 2em;
     font-weight: bold;
-    margin-top: 0;
 }
 
 .custom-subheader {
     font-size: 1.5em;
     font-weight: bold;
-    margin-top: 0;
-}
-
-/* Pour aligner verticalement le texte avec le panneau latéral */
-.custom-header {
-    padding-top: 50px; /* Ajuste cette valeur pour aligner le texte */
-}
-
-.custom-subheader {
-    padding-top: 50px; /* Ajuste cette valeur pour aligner le texte */
 }
