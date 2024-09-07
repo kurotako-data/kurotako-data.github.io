@@ -1,15 +1,24 @@
 ---
-layout: default
-title: Data Analyst Certification Project
+layout: default  
+title: Data Analyst Certification Project  
 ---
 
 <h1>Data Analyst Certification Project</h1>
 <p>Website Sales Analysis and Optimisation</p>
 
-<h2>What datasets were used to achieve the objectives of this project?</h2>
-<p>Four datasets: one file containing behavioural data (events.csv), two files containing item properties (item_properties.сsv), and one file describing the category tree (category_tree.сsv). The data was collected from a real e-commerce website. This is raw data, i.e. without any transformation of the content, but all values were anonymised for confidentiality reasons. The data was freely available on Kaggle.</p>
+<h2>Introduction</h2>
+<p>This project focuses on analyzing and optimizing website sales using data-driven insights. The main objective is to uncover purchasing patterns, predict sales trends, and provide actionable recommendations for the website's owner.</p>
 
-<h2>Data Volumetrics:</h2>
+<h2>What datasets were used to achieve the objectives of this project?</h2>
+<p>We leveraged four datasets collected from a real e-commerce website:</p>
+<ul>
+    <li><strong>Events Data:</strong> Behavioral data describing user interactions on the site.</li>
+    <li><strong>Item Properties:</strong> Two files capturing detailed information about product properties.</li>
+    <li><strong>Category Tree:</strong> A dataset providing the category hierarchy of the products sold.</li>
+</ul>
+<p>All datasets were anonymized to protect user privacy. These datasets, originally from <a href="https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset" target="_blank">Kaggle</a>, were adapted for this analysis to ensure scalability.</p>
+
+<h2>Data Volumetrics</h2>
 <ul>
     <li><strong>Events:</strong> 275,609 rows / 5 columns</li>
     <li><strong>Item Properties A:</strong> 2,520,259 rows / 4 columns</li>
@@ -17,22 +26,12 @@ title: Data Analyst Certification Project
     <li><strong>Category Tree:</strong> 1,669 rows / 2 columns</li>
 </ul>
 
-<!-- Lien vers Kaggle avec l'ajout du commentaire -->
-<a href="https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset" target="_blank">Kaggle Dataset Link</a> <br>
-<em>Note: Original files were not used due to their volume.</em><br><br>
+<em>Note: A lighter version of the original datasets was used due to volume considerations.</em><br><br>
 
-<!-- Nouveau lien vers les fichiers utilisés dans le projet avec la citation supplémentaire -->
-<a href="https://github.com/kurotako-data/Data-Analyst-certification-project" target="_blank">GitHub Link to Used Files</a><br>
-<em>Note: Files used for the project are a lighter version of the original Kaggle files.</em><br><br>
-
-<!-- Lien vers le code Python du projet -->
-<a href="https://github.com/kurotako-data/Data-Analyst-certification-project/blob/main/DA_projet.py" target="_blank">Link to Python Project Code</a><br>
-<em>Note: This link will take you to the Python code used in this project.</em><br><br>
-
-<!-- Lien vers l'application Streamlit hébergée -->
-<a href="https://data-analyst-certification-project-28gk6hqyer7zfkjypxxzzm.streamlit.app/" target="_blank">Link to Streamlit Application</a><br>
-<em>Note: This link will take you to the live Streamlit application for this project.</em><br><br>
-
+<!-- Links -->
+<a href="https://github.com/kurotako-data/Data-Analyst-certification-project" target="_blank">GitHub Link to Project Files</a> <br>
+<a href="https://github.com/kurotako-data/Data-Analyst-certification-project/blob/main/DA_projet.py" target="_blank">View Python Project Code</a> <br>
+<a href="https://data-analyst-certification-project-28gk6hqyer7zfkjypxxzzm.streamlit.app/" target="_blank">Explore the Streamlit Application</a> <br>
 
 <h2>Project Objectives</h2>
 <p>The main objectives of this project were to:</p>
@@ -45,23 +44,34 @@ title: Data Analyst Certification Project
     <li><strong>Prepare for Advanced Analytics:</strong> Cleanse and transform the data to facilitate advanced analytics, including machine learning and predictive modeling.</li>
 </ul>
 
-<p>These objectives aim to leverage data to drive growth and operational efficiency in a dynamic business environment.</p>
-
 <h2>Conclusion and Recommendations</h2>
+<blockquote>
+   "Ensuring product availability in high-demand clusters is crucial for optimizing conversion rates."
+</blockquote>
 <p>
-    Based on the analysis and the results obtained through KMeans clustering, it is clear that user behavior can be segmented into distinct groups. By focusing on clusters 1 and 3, the website owner can target promising market niches for additional sales opportunities.
+    Based on the KMeans clustering results, user behavior can be segmented into distinct groups, allowing the website owner to focus on clusters 1 and 3 for targeted sales opportunities.
+</p>
+<ul>
+    <li><strong>Cluster 1:</strong> Prioritize product availability to improve conversion rates, as 40% of products in this cluster were unavailable during the observation period.</li>
+    <li><strong>Cluster 3:</strong> Loyal customers present an opportunity for targeted promotional campaigns to increase purchase volumes.</li>
+</ul>
+
+<p>
+    While linear regression provided insights, its predictive performance was limited for transaction forecasting. Additional variables, such as demographic or historical behavior data, may improve model accuracy.
 </p>
 <p>
-    Ensuring product availability is a critical factor in optimizing conversion rates. Special attention should be given to products in high-demand clusters to ensure stock availability and improve customer satisfaction.
+    The Isolation Forest model, though promising for anomaly detection, requires further fine-tuning to reduce false positives. It can potentially help identify cross-selling opportunities or target specific user segments for promotional activities.
 </p>
-<p>
-    Although linear regression provided some valuable insights, it should not be the sole predictive model, as its performance in transaction prediction was limited. Further refinement of the data and additional variables could help improve prediction accuracy.
-</p>
-<p>
-    Lastly, the use of Isolation Forest in detecting anomalies in sales data, although interesting, requires further calibration to reduce false positives and enhance its utility in spotting opportunities for cross-selling or targeted promotions.
-</p>
-<p>
-    For more detailed insights and specific recommendations, you can check the full <a href="https://github.com/kurotako-data/Data-Analyst-certification-project/blob/main/final_recommendations.txt" target="_blank">conclusion report here</a>.
-</p>
+
+<p><strong>Key Recommendations:</strong></p>
+<ul>
+    <li><strong>Use linear regression:</strong> To evaluate the impact of marketing campaigns on sales.</li>
+    <li><strong>Leverage KMeans clusters:</strong> For personalized user experiences and promotional offers, ensuring product availability, especially in high-demand segments.</li>
+    <li><strong>Optimize product availability:</strong> Improving stock levels for popular products is critical to reducing lost sales.</li>
+    <li><strong>Implement Isolation Forest:</strong> To monitor and address anomalies in sales trends, with the goal of enhancing sales performance.</li>
+</ul>
+
+<p>For more details, you can check the full <a href="https://github.com/kurotako-data/Data-Analyst-certification-project/blob/main/final_recommendations.txt" target="_blank">conclusion report here</a>.</p>
+
 
 
