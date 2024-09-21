@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
@@ -37,6 +37,9 @@
             <li><a class="buttons github" href="{{ site.github.owner_url }}">GitHub Profile</a></li>
           </ul>
         {% endif %}
+
+        <!-- Ajout du logo de la pieuvre ici -->
+        <img src="{{ '/assets/images/Logo_pieuvre.png' | relative_url }}" alt="Logo pieuvre" style="width: 150px; height: auto; margin-top: 20px;">
       </header>
 
       <section>
@@ -50,3 +53,4 @@
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
   </body>
 </html>
+
