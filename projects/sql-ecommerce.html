@@ -20,7 +20,7 @@ title: Projet SQL : Analyse des données commerciales d'un disquaire
     <li><strong>playlist_track :</strong> Association entre les playlists et les morceaux.</li>
     <li><strong>playlist :</strong> Détails des playlists créées par les utilisateurs.</li>
     <li><strong>album :</strong> Albums associés aux artistes.</li>
-    <li><strong>artist :</strong> Informations sur les artistes.</li>
+    <li><strong>artist :</strong> Détails des artistes de musique.</li>
     <li><strong>media_type :</strong> Types de médias (ex: fichier MP3, vidéo).</li>
     <li><strong>genre :</strong> Genres de musique (rock, pop, etc.).</li>
 </ul>
@@ -28,56 +28,26 @@ title: Projet SQL : Analyse des données commerciales d'un disquaire
 <h2>Opérations effectuées</h2>
 <p>Nous avons effectué les opérations suivantes pour analyser les données :</p>
 <ul>
-    <li><strong>Importation des fichiers CSV dans MySQL :</strong> Les fichiers CSV, tels que employee.csv, customer.csv, et invoice.csv, ont été importés avec quelques corrections manuelles pour résoudre les erreurs de clés étrangères et de formats de données.</li>
+    <li><strong>Importation des fichiers CSV dans MySQL :</strong> Les fichiers CSV, tels que employee.csv, customer.csv, et invoice.csv, ont été importés avec quelques corrections manuelles pour résoudre des erreurs de clés étrangères et de formats de données.</li>
     <li><strong>Vérification des incohérences :</strong> Nous avons vérifié l'intégrité des clés étrangères avec des requêtes SQL pour nous assurer que les relations entre les tables étaient valides.</li>
 </ul>
 
 <h2>Requêtes analytiques SQL</h2>
 <p>Plusieurs requêtes SQL ont été exécutées pour obtenir des insights spécifiques sur l'activité du magasin. Voici quelques exemples :</p>
-
 <ul>
-    <li><strong>Employé le plus jeune :</strong> Cette requête identifie l'employé le plus jeune en triant les employés par date de naissance.</li>
-    <pre><code>SELECT first_name, last_name, title FROM employee ORDER BY birthdate DESC LIMIT 1;</code></pre>
-    
-    <li><strong>Top 3 des pays avec le plus de factures :</strong> Requête regroupant les factures par pays et triant les résultats par nombre de factures.</li>
-    <pre><code>SELECT billing_country, COUNT(*) AS total_invoices FROM invoice GROUP BY billing_country ORDER BY total_invoices DESC LIMIT 3;</code></pre>
-
-    <li><strong>Meilleur client en termes de dépenses totales :</strong> Cette requête calcule le total des dépenses de chaque client et affiche celui ayant dépensé le plus.</li>
-    <pre><code>SELECT c.first_name, c.last_name, SUM(i.total) AS total_spent 
-FROM customer c 
-JOIN invoice i ON c.customer_id = i.customer_id 
-GROUP BY c.customer_id 
-ORDER BY total_spent DESC LIMIT 1;</code></pre>
-
-    <li><strong>Genre de musique le plus populaire par pays :</strong> Cette requête calcule le nombre d'achats de morceaux de musique par genre pour chaque pays.</li>
-    <pre><code>SELECT c.country, g.name AS genre_name, COUNT(il.quantity) AS total_purchases 
-FROM invoice i 
-JOIN customer c ON i.customer_id = c.customer_id 
-JOIN invoice_line il ON i.invoice_id = il.invoice_id 
-JOIN track t ON il.track_id = t.track_id 
-JOIN genre g ON t.genre_id = g.genre_id 
-GROUP BY c.country, g.genre_id 
-ORDER BY c.country, total_purchases DESC;</code></pre>
+    <li><strong>Top 3 des pays avec le plus de factures :</strong> Requête SQL pour obtenir les pays avec le plus grand nombre de factures.</li>
+    <li><strong>Meilleur client en termes de dépenses totales :</strong> Requête SQL pour identifier le client ayant dépensé le plus.</li>
+    <li><strong>Genre de musique le plus populaire par pays :</strong> Requête SQL pour déterminer le genre de musique le plus acheté par pays.</li>
 </ul>
-
-<h2>Volumétrie des données</h2>
-<ul>
-    <li><strong>employee.csv :</strong> 10 lignes / 6 colonnes</li>
-    <li><strong>customer.csv :</strong> 59 lignes / 8 colonnes</li>
-    <li><strong>invoice.csv :</strong> 412 lignes / 9 colonnes</li>
-    <li><strong>track.csv :</strong> 3503 lignes / 6 colonnes</li>
-</ul>
-
-<h2>Conclusion et recommandations</h2>
-<blockquote>
-   "Grâce à cette analyse SQL, nous avons pu identifier des tendances importantes dans les ventes et la gestion des stocks du magasin, permettant d'optimiser les opérations commerciales."
-</blockquote>
-<p>Ce projet a permis d'acquérir des insights précieux sur l'activité du magasin de musique, notamment en identifiant les clients les plus dépensiers, les genres de musique les plus populaires, et les opportunités d'amélioration dans la gestion des stocks. En optimisant l'importation des données et en utilisant des requêtes SQL adaptées, nous avons pu extraire des informations utiles pour la gestion quotidienne du magasin.</p>
 
 <!-- Lien vers le projet GitHub -->
-<p><a href="https://github.com/kurotako-data/sql_music_shop" target="_blank">Lien GitHub vers les fichiers du projet SQL</a></p> 
-<p><a href="https://github.com/kurotako-data/sql_music_shop/blob/main/sql_music_shop.sql" target="_blank">Voir les requêtes SQL du projet</a></p> 
+<p><a href="https://github.com/kurotako-data/sql_music_shop" target="_blank">Lien GitHub vers les fichiers du projet</a></p>
+<p><a href="https://github.com/kurotako-data/sql_music_shop/blob/main/sql_music_shop.sql" target="_blank">Voir le code SQL du projet</a></p>
 
-<p><a href="../index.html">Retour à l'index des projets</a></p> <!-- Bouton pour retourner à la page d'index -->
+<h2>Conclusion et recommandations</h2>
+<p>Ce projet SQL a permis de manipuler efficacement des données complexes, de résoudre des problèmes liés à l'importation de fichiers CSV et de générer des insights précieux via des requêtes SQL optimisées. Ces analyses peuvent aider à mieux comprendre le comportement des clients et la popularité des genres musicaux.</p>
+
+<p><a href="../index.html">Retour à l'index des projets</a></p>
+
 
 
