@@ -1,0 +1,35 @@
+---
+layout: default
+title: Indices d'éco-innovation et particules fines PM 2.5
+---
+
+<h1>Indices d'éco-innovation et particules fines PM 2.5</h1>
+<p>Évaluer la relation entre l'indice d'éco-innovation et les décès prématurés dus aux particules fines (PM2.5) pour identifier les impacts des politiques écologiques sur la santé publique.</p>
+
+<h2>Introduction</h2>
+<p>Ce projet analyse l’efficacité de l’indice d’éco-innovation en Europe en le mettant en relation avec les décès prématurés dus aux particules fines (PM2.5) dans différents pays européens. L’objectif est de déterminer si les pays ayant un score élevé d’éco-innovation ont des taux de mortalité plus faibles liés à la pollution par les particules fines.</p>
+
+<h2>Quels ensembles de données ont été utilisés pour atteindre les objectifs de ce projet ?</h2>
+<ul>
+    <li><strong>Décès dus au PM2.5 :</strong> Tableau de données comprenant les décès prématurés attribués aux PM2.5 de 2005 à 2023 par pays.</li>
+    <li><strong>Indice d’éco-innovation :</strong> Tableau de données de l’indice d’éco-innovation calculé de 2013 à 2022 pour les États membres européens.</li>
+</ul>
+
+<h2>Méthodologie</h2>
+<ol>
+    <li><strong>Préparation des Données :</strong> Harmonisation des deux jeux de données pour la période commune (2013-2022) et vérification des pays disponibles dans chaque ensemble.</li>
+    <li><strong>Calculs Préliminaires :</strong> Analyse des tendances annuelles pour les décès dus au PM2.5 par pays et de la progression de l’indice d’éco-innovation.</li>
+    <li><strong>Analyse des Corrélations :</strong> Calcul des corrélations entre l’indice d’éco-innovation et les décès dus au PM2.5 pour chaque pays afin d’identifier les relations potentielles.</li>
+    <li><strong>Modélisation Statistique :</strong> Utilisation de régressions linéaires pour modéliser la relation entre l’indice d’éco-innovation et les décès liés aux PM2.5, avec un focus sur les tendances significatives.</li>
+    <li><strong>Visualisation des Résultats :</strong> Création de graphiques interactifs et de cartes de chaleur pour illustrer les corrélations par pays et les effets de l’éco-innovation sur la santé.</li>
+</ol>
+
+<h2>Conclusion et recommandations</h2>
+<blockquote>
+   "L'analyse de la relation entre l'éco-innovation et les décès dus aux PM2.5 permet d’évaluer l'impact des initiatives écologiques sur la santé publique."
+</blockquote>
+<p>Ce projet propose une première évaluation de l’efficacité des initiatives d’éco-innovation en Europe et de leur impact potentiel sur la réduction des décès dus aux particules fines. Les résultats obtenus pourraient aider à identifier les pays où l’éco-innovation semble avoir un impact direct sur la santé publique et inciter à des politiques similaires dans d'autres régions.</p>
+
+<!-- Liens vers GitHub et retour à l'index -->
+<p><a href="https://github.com/kurotako-data/eco_innovation_particules_fines" target="_blank">Lien GitHub vers les fichiers du projet</a></p>
+<p><a href="../index.html">Retour à l'index des projets</a></p>
